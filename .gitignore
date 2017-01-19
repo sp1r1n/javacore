@@ -45,3 +45,13 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# ideafiles etc.
+.idea/
+*.iws
+*.iml
+/out/
+/target/
+ehthumbs.db
+Icon?
+Thumbs.db
