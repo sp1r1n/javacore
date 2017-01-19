@@ -6,7 +6,7 @@ package com.sp1r1n.javacore;
 public class WideningCasting {
     public static void main(String[] args) {
         WideningCasting wd = new WideningCasting();
-        wd.Widening();
+        wd.widening();
     }
 
     byte byte1 = 127;
@@ -16,8 +16,8 @@ public class WideningCasting {
     float float1 = 0.0f;
     double double1 = 0.0d;
     //correct conversion 64f<=32f<=64<=32<=16<=8
-    public void Widening(){
+    public void widening(){
         double1 = float1 = long1 = int1 = short1 = byte1;
-        System.out.println(double1 + " ( ͡° ͜ʖ ͡°) ");
+        System.out.println(double1 + " (͡°͜ʖ͡°) ");
     }
 }
