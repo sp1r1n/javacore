@@ -10,4 +10,3 @@ public class DenvMain {
             System.out.print("https://github.com/sp1r1n/javacore");
         }
     }
-
