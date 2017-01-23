@@ -1,4 +1,6 @@
-package com.sp1r1n.javacore;
+package com.sp1r1n.runners.classwork.lesson2;
+
+import com.sp1r1n.app.classwork.lesson2.NarrowingCasting;
 
 /**
  * Created by DELL on 1/19/2017.

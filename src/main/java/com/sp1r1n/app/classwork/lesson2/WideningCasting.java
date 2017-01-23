@@ -1,4 +1,4 @@
-package com.sp1r1n.javacore;
+package com.sp1r1n.app.classwork.lesson2;
 
 /**
  * Created by DELL on 1/19/2017.
