@@ -8,6 +8,6 @@ import com.sp1r1n.app.classwork.lesson2.NarrowingCasting;
 public class Runner {
     public static void main(String[] args) {
         NarrowingCasting casting = new NarrowingCasting();
-        casting.narrowing();
+        casting.narrowing(); 
     }
 }
