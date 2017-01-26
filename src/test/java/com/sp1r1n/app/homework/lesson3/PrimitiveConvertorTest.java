@@ -10,26 +10,45 @@ import static org.junit.Assert.*;
  */
 public class PrimitiveConvertorTest {
     @Test
-    public void floatToCharSame() throws Exception {
+    public void floatToChar() throws Exception {
         PrimitiveConvertor primitiveConvertor = new PrimitiveConvertor();
         char b = '#';
-        assertSame("Test 1: These variables are not same:", b, primitiveConvertor.floatToChar(35.0f));
+        assertEquals("Test 1: ", b, primitiveConvertor.floatToChar(35.0f));
     }
+
     @Test
-    public void floatToCharNotSame() throws Exception {
+    public void floatToCharNot() throws Exception {
         PrimitiveConvertor primitiveConvertor = new PrimitiveConvertor();
-        char b = '$';
-        assertNotSame("Test 2: These variables are same:", b, primitiveConvertor.floatToChar(41.0f));
+        char b = '@';
+        assertNotEquals("Test 1: ", b, primitiveConvertor.floatToChar(35.0f));
     }
 
     @Test
     public void intToChar() throws Exception {
+        PrimitiveConvertor primitiveConvertor = new PrimitiveConvertor();
+        char b = '#';
+        assertEquals("Test 2: ", b, primitiveConvertor.intToChar(35));
+    }
 
+    @Test
+    public void intToCharNot() throws Exception {
+        PrimitiveConvertor primitiveConvertor = new PrimitiveConvertor();
+        char b = '@';
+        assertNotEquals("Test 2: ", b, primitiveConvertor.intToChar(35));
     }
 
     @Test
     public void charToInt() throws Exception {
+        PrimitiveConvertor primitiveConvertor = new PrimitiveConvertor();
+        int a = 35;
+        assertEquals("Test 3: ", a, primitiveConvertor.charToInt('#'));
+    }
 
+    @Test
+    public void charToIntNot() throws Exception {
+        PrimitiveConvertor primitiveConvertor = new PrimitiveConvertor();
+        int a = 36;
+        assertNotEquals("Test 4: ", a, primitiveConvertor.charToInt('#'));
     }
 
 }

@@ -9,4 +9,5 @@ public class ArraySorting {
         Arrays.sort(inputArray);
         return inputArray;
     }
+
 }
