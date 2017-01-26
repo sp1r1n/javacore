@@ -1,5 +1,6 @@
 package com.sp1r1n.app.homework.lesson3;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -8,10 +9,17 @@ import static org.junit.Assert.*;
  * Created by DELL on 1/24/2017.
  */
 public class ArraySortingTest {
+
+    ArraySorting arraySorting;
+
+    @Before
+    public void init(){
+        arraySorting = new ArraySorting();
+    }
+
     @Test
     public void sortInputArrayMaxElement() throws Exception {
         int[] inputArray = {4,5,3,11,22,4422,124,41,222};
-        ArraySorting arraySorting = new ArraySorting();
         arraySorting.sortInputArray(inputArray);
         int maxElement = inputArray.length - 1;
         int prevElement = inputArray.length - 2;
@@ -20,7 +28,6 @@ public class ArraySortingTest {
     @Test
     public void sortInputArrayAssertTrue() throws Exception {
         int[] inputArray = {4,5,3,11,22,4422,124,41,222};
-        ArraySorting arraySorting = new ArraySorting();
         arraySorting.sortInputArray(inputArray);//comment this row to see failed test
         int check = 0;
         String message = "Failed elements in array: \n";
