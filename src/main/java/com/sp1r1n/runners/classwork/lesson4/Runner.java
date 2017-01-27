@@ -7,7 +7,7 @@ import com.sp1r1n.app.classwork.lesson4.CircleSquare;
  */
 public class Runner {
     public static void main(String[] args) {
-        CircleSquare.evenOrOdd();
+        //CircleSquare.evenOrOdd();
         //CircleSquare.isTriangleRightAngle();
     }
 }
