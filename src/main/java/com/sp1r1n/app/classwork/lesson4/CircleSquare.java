@@ -15,12 +15,15 @@ public class CircleSquare {
         circleArea2 = Math.pow(circleRadius2, 2) * Math.PI;
         if (circleArea1 > circleArea2) {
             result[0] = true;
+            System.out.print("Circle 1 > Circle 2\n________________" );
         }
         else if (circleArea1 < circleArea2) {
             result[1] = true;
+            System.out.print("Circle 2 > Circle 1\n________________");
         }
         else {
             result[2] = true;
+            System.out.print("Circle 1 = Circle 2\n________________");
         }
         return result;
     }

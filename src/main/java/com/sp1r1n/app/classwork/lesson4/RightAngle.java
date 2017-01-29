@@ -8,20 +8,14 @@ import java.util.Scanner;
 public class RightAngle {
     static boolean result;
 
-    public static void isRightAngle(double a, double b, double c){
-        /*double[] array = new double[3];
-        Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < array.length; i++)
-        {
-            System.out.print("Please input side " + i + ": ");
-            array[i] = scanner.nextDouble();
-        }*/
+    public static boolean isRightAngle(double a, double b, double c){
         if (Math.pow(c, 2) == Math.pow(a, 2) + Math.pow(b, 2) || Math.pow(b, 2) == Math.pow(a, 2) + Math.pow(c, 2) || Math.pow(a, 2) == Math.pow(b, 2) + Math.pow(c, 2)){
             result = true;
-            System.out.print("Triangle is right-angle");
+            System.out.print("Triangle is right-angle\n________________");
         }
-
-        else
-            System.out.print("Triangle is NOT right-angle");
+        else {
+            System.out.print("Triangle is NOT right-angle\n________________");
+        }
+        return result;
     }
 }
