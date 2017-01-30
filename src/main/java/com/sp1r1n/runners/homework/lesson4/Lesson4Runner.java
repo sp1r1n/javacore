@@ -1,4 +1,4 @@
-package com.sp1r1n.runners.classwork.lesson4;
+package com.sp1r1n.runners.homework.lesson4;
 
 import com.sp1r1n.app.classwork.lesson4.CircleSquare;
 import com.sp1r1n.app.classwork.lesson4.EvenOdd;
@@ -10,7 +10,7 @@ import java.util.Scanner;
 /**
  * Created by DELL on 1/26/2017.
  */
-public class Runner {
+public class Lesson4Runner {
     static int i;
     public static void main(String[] args) throws Exception {
         do {
