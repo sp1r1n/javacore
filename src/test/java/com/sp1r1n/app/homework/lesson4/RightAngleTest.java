@@ -3,6 +3,7 @@ package com.sp1r1n.app.homework.lesson4;
 import com.sp1r1n.app.classwork.lesson4.RightAngle;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -12,8 +13,8 @@ import static org.junit.Assert.*;
  */
 public class RightAngleTest {
 
-    @Before
-    public void init(){
+    @BeforeClass
+    public static void init(){
         RightAngle rightAngle = new RightAngle();
     }
     @Test

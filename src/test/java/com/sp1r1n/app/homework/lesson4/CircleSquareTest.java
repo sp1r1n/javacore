@@ -3,6 +3,7 @@ package com.sp1r1n.app.homework.lesson4;
 import com.sp1r1n.app.classwork.lesson4.CircleSquare;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.lang.reflect.Array;
@@ -15,8 +16,8 @@ import static org.junit.Assert.*;
 public class CircleSquareTest {
     //CircleSquare circleSquare;
 
-    @Before
-            public void init(){
+    @BeforeClass
+    public void init(){
         CircleSquare circleSquare = new CircleSquare();
     }
 

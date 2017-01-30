@@ -3,6 +3,7 @@ package com.sp1r1n.app.homework.lesson4;
 import com.sp1r1n.app.classwork.lesson4.EvenOdd;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -13,7 +14,7 @@ import static org.junit.Assert.*;
 public class EvenOddTest {
 
 
-    @Before
+    @BeforeClass
     public void init() {
         EvenOdd evenOdd = new EvenOdd();
     }
