@@ -2,6 +2,7 @@ package com.sp1r1n.app.homework.lesson4;
 
 import com.sp1r1n.app.classwork.lesson4.CircleSquare;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.lang.reflect.Array;
@@ -13,6 +14,11 @@ import static org.junit.Assert.*;
  */
 public class CircleSquareTest {
     //CircleSquare circleSquare;
+
+    @Before
+            public void init(){
+        CircleSquare circleSquare = new CircleSquare();
+    }
 
     @Test
     public void calculateCheckArea1() throws Exception {
@@ -34,6 +40,8 @@ public class CircleSquareTest {
         boolean[] expRes = {false, false, true};
         Assert.assertArrayEquals(CircleSquare.calculateCheck(5.0, 5.0), expRes);
     }
+
+
 
 
 

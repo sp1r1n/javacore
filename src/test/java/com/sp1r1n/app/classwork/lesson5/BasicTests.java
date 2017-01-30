@@ -17,8 +17,8 @@ public class BasicTests {
 // Assume that with the same input data each method should have some specific results
 // in practice difference between sorting methods is time,
 // but we will use earthier solution
-    private static final String INPUT_DATA = "input.txt";
-    private static final String EXPECTED_RESULTS = "expected.txt";
+    private static final String INPUT_DATA = "src/test/resources/input.txt";
+    private static final String EXPECTED_RESULTS = "src/test/resources/expected.txt";
     private static int[] inputData = null;
     private static int[] expectedResults = null;
 
@@ -50,10 +50,11 @@ public class BasicTests {
 // of course java has garbage collector and this method now useless
 // but imagine if as results of our test we have some data in database
 // so after steps used to clean things, that will not be clean automatically
-        expectedResults = null; }
+        inputData = null;
+    }
     @AfterClass
     public static void postConditionsForClass(){
-        inputData = null; }
+        expectedResults = null; }
     public static int[] readTheFile(String path) throws IOException {
         int[] result = null;
         BufferedReader reader = new BufferedReader(new FileReader(path));
@@ -67,7 +68,7 @@ public class BasicTests {
         return result; }
     public static int[] fromStringArray(String[] array){
         int[] result = new int[array.length];
-        for (int i=0; i<array.length; i++){
+        for (int i = 0; i < array.length; i++){
             result[i] = Integer.valueOf(array[i]);
         }
         return result;

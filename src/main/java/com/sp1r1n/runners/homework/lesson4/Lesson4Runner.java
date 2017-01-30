@@ -4,7 +4,6 @@ import com.sp1r1n.app.classwork.lesson4.CircleSquare;
 import com.sp1r1n.app.classwork.lesson4.EvenOdd;
 import com.sp1r1n.app.classwork.lesson4.RightAngle;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -47,7 +46,6 @@ public class Lesson4Runner {
                         break;
                     default: System.out.print("No such point here\n");
                 }
-
             }
             catch (Exception e) {
                 System.out.print("Error: Please input correct value\n");
