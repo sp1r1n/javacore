@@ -1,7 +1,10 @@
 package com.sp1r1n.app.homework.lesson4;
 
 import com.sp1r1n.app.classwork.lesson4.CircleSquare;
+import org.junit.Assert;
 import org.junit.Test;
+
+import java.lang.reflect.Array;
 
 import static org.junit.Assert.*;
 
@@ -13,17 +16,25 @@ public class CircleSquareTest {
 
     @Test
     public void calculateCheckArea1() throws Exception {
-        assertTrue("Test1: Area2 is bigger\n", CircleSquare.calculateCheck(5.0, 4.0)[0]);
+        assertTrue("Test1 failed\n", CircleSquare.calculateCheck(5.0, 4.0)[0]);
     }
 
     @Test
     public void calculateCheckArea2() throws Exception {
-        assertTrue("Test2: Area2 is bigger\n", CircleSquare.calculateCheck(4.0, 5.0)[1]);
+        assertTrue("Test2 failed\n", CircleSquare.calculateCheck(4.0, 5.0)[1]);
     }
 
     @Test
     public void calculateCheckEquals() throws Exception {
-        assertTrue("Test3: Area1 equals Area2\n", CircleSquare.calculateCheck(5.0, 5.0)[2]);
+        assertTrue("Test3 failed\n", CircleSquare.calculateCheck(5.0, 5.0)[2]);
     }
+
+    @Test
+    public void calculateCheckEqualsFalse() throws Exception {
+        boolean[] expRes = {false, false, true};
+        Assert.assertArrayEquals(CircleSquare.calculateCheck(5.0, 5.0), expRes);
+    }
+
+
 
 }
