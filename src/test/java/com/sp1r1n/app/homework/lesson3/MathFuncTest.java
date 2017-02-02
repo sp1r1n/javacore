@@ -42,7 +42,7 @@ public class MathFuncTest {
     @Test
     public void div() throws Exception {
         int expRes = 2;
-        Assert.assertEquals(expRes, mathFunc.div(a, b));
+        Assert.assertEquals(expRes, mathFunc.div(b, a));
     }
 
     @Test
@@ -52,13 +52,13 @@ public class MathFuncTest {
     }
 
     @Test
-    public void pow() throws Exception {
+    public void percentage() throws Exception {
         float expRes = 25.0f;
         Assert.assertEquals(expRes, mathFunc.percentage(n, m), DELTA);
     }
 
     @Test
-    public void percentage() throws Exception {
+    public void pow() throws Exception {
         float expRes = 81.0f;
         Assert.assertEquals(expRes, mathFunc.pow(x, y), DELTA);
     }

@@ -8,7 +8,7 @@ public class MathFunc {
     public int multiply (int a, int b) {return a * b;}
     public int diff (int a, int b) {return a - b;}
     public int sum (int a, int b) {return a + b;}
-    public int div (int a, int b) {return b / a;}
+    public int div (int a, int b) {return a / b;}
     public double sqrt (double x) {return Math.sqrt(x);}
     public double pow (double x, double y) {return Math.pow(x, y);}
     public float percentage (float n, float m) {return ((n*100)/m);}
