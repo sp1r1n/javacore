@@ -7,6 +7,7 @@ import java.util.Scanner;
  * Created by Denis on 27.01.2017.
  */
 public class EvenOdd {
+
     public static boolean isEven(double something){
         boolean result;
         if (something%2 == 0) {
