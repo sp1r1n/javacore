@@ -11,11 +11,9 @@ public class EvenOdd {
         boolean result;
         if (something%2 == 0) {
             result = true;
-            System.out.print(something + " is even\n________________");
         }
         else {
             result = false;
-            System.out.print(something + " is odd\n________________");
         }
         return result;
     }
