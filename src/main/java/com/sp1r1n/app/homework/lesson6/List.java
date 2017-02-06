@@ -8,22 +8,22 @@ import java.util.Scanner;
  * Created by DELL on 2/6/2017.
  */
 public class List {
-    public static ArrayList<Integer> numbers (int inputNumber){
-        ArrayList<Integer> nums = new ArrayList<Integer>();
+    static ArrayList<Integer> nums;
+
+    public static ArrayList<Integer> numbers(int inputNumber){
         nums.add(inputNumber);
         return (nums);
     }
 
     public static void main(String[] args) {
-        ArrayList arr = new ArrayList();
         Scanner scanner = new Scanner(System.in);
         int input;
         do {
             input = scanner.nextInt();
-            arr = numbers(input);
+            numbers(input);
         }
         while (input != 99);
-        for (Object item : arr
+        for (Object item : nums
              ) {
             System.out.println(item);
         }
