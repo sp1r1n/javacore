@@ -7,7 +7,7 @@ import java.util.stream.IntStream;
 /**
  * Created by DELL on 2/6/2017.
  */
-public class EvenArray {
+public class RandomArray {
     static int[] outputArray;
 
     public static int[] createArrayRandom () {
