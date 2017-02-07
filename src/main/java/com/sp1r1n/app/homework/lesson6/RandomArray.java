@@ -41,7 +41,7 @@ public class RandomArray {
         outputArray = new int[length];
         int i = 0;
         do {
-            int n = random.nextInt(maxvalue);
+            int n = random.nextInt(maxvalue + 1);
             outputArray[i] = n;
             i++;
         }
@@ -49,9 +49,9 @@ public class RandomArray {
         return outputArray;
     }
 
-    public static int[] createArrayRandom (int maxvalue, boolean iseven) {
+    public static int[] createArrayRandom (int length, int maxvalue, boolean iseven) {
         Random random = new Random();
-        outputArray = new int[maxvalue/2];
+        outputArray = new int[length];
         int i = 0;
         do {
             int n = random.nextInt(maxvalue + 1);
@@ -60,7 +60,7 @@ public class RandomArray {
                 i++;
             }
         }
-        while (i < maxvalue/2);
+        while (i < length);
         return outputArray;
     }
 
@@ -89,11 +89,14 @@ public class RandomArray {
     }
 
     public static void main(String[] args) {
-        /*int[] array = createArrayRandom();
+        int[] array = createArrayRandom(55, false, true);
         BubbleSort bubbleSort = new BubbleSort();
-        bubbleSort.bubbleSortDesc(array);*/
-        c
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        bubbleSort.bubbleSortDesc(array);
+        for (int i = 0; i < array.length; i++)
+        {
+            System.out.println(array[i]);
+        }
+        /*ArrayList<Integer> list = new ArrayList<Integer>();
         Random random = new Random();
         int n;
         for (int i = 0; i < 10; i++){
@@ -104,6 +107,6 @@ public class RandomArray {
         bubbleSort.bubbleSortDesc(list);
         for (int j = 0; j < list.size(); j++){
             System.out.println(j + " " + list.get(j));
-        }
+        }*/
     }
 }
