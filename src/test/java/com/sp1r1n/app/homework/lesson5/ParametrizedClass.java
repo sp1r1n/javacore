@@ -1,4 +1,4 @@
-package com.sp1r1n.app.classwork.lesson5;
+package com.sp1r1n.app.homework.lesson5;
 
 import com.sp1r1n.app.classwork.lesson3.MathFunc;
 import junitparams.FileParameters;
