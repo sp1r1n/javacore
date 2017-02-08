@@ -19,17 +19,4 @@ public class List {
         outputList.add(inputvalue);
         return (outputList);
     }
-
-
-    public static void main(String[] args) {
-        /*outputList = new ArrayList<>();
-        int input;
-        Scanner scanner = new Scanner(System.in);
-        do {
-            input = scanner.nextInt();
-            createList(input);
-            System.out.println(outputList);
-        }
-        while (input != 333);*/
-    }
 }

@@ -35,6 +35,19 @@ public class Computing {
         return outputvalue;
     }
 
+    public int numberLength(int inputValue){
+        String s = Integer.toString(inputValue);
+        outputvalue = s.length();
+        return outputvalue;
+    }
+
+    public String addSpaces(int length, int max){
+        String spacesToAdd = " ";
+        for (int i = length; i < max; i++) {
+            spacesToAdd = spacesToAdd + " ";
+        }
+        return spacesToAdd;
+    }
 
     public static void main(String[] args) {
         bubbleSort = new BubbleSort();

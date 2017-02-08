@@ -96,14 +96,4 @@ public class RandomArray {
                 matrix[i][j] = random.nextInt(maxvalue - minvalue + 1) + minvalue;
         return matrix;
     }
-
-    public static void main(String[] args) {
-        int[][] array = createMatrixRandom(5, 7, 10, 99);
-        //BubbleSort bubbleSort = new BubbleSort();
-        //bubbleSort.bubbleSortDesc(array);
-        for (int i = 0; i < 5; ++i, System.out.println())
-            for (int j = 0; j < 7; ++j)
-                System.out.print(array[i][j] + " ");
-
-    }
 }
