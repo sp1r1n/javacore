@@ -88,25 +88,22 @@ public class RandomArray {
         return outputArray;
     }
 
-    public static void main(String[] args) {
-        int[] array = createArrayRandom(55, false, true);
-        BubbleSort bubbleSort = new BubbleSort();
-        bubbleSort.bubbleSortDesc(array);
-        for (int i = 0; i < array.length; i++)
-        {
-            System.out.println(array[i]);
-        }
-        /*ArrayList<Integer> list = new ArrayList<Integer>();
+    public static int[][] createMatrixRandom (int n, int m, int minvalue, int maxvalue) {
         Random random = new Random();
-        int n;
-        for (int i = 0; i < 10; i++){
-            n = random.nextInt(66);
-            list.add(i, n);
-        }
-        BubbleSort bubbleSort = new BubbleSort();
-        bubbleSort.bubbleSortDesc(list);
-        for (int j = 0; j < list.size(); j++){
-            System.out.println(j + " " + list.get(j));
-        }*/
+        int[][] matrix = new int[n][m];
+        for (int i = 0; i < n; i++)
+            for (int j = 0; j < m; j++)
+                matrix[i][j] = random.nextInt(maxvalue - minvalue + 1) + minvalue;
+        return matrix;
+    }
+
+    public static void main(String[] args) {
+        int[][] array = createMatrixRandom(5, 7, 10, 99);
+        //BubbleSort bubbleSort = new BubbleSort();
+        //bubbleSort.bubbleSortDesc(array);
+        for (int i = 0; i < 5; ++i, System.out.println())
+            for (int j = 0; j < 7; ++j)
+                System.out.print(array[i][j] + " ");
+
     }
 }
