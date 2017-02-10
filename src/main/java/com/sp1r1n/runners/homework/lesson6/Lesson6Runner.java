@@ -4,9 +4,6 @@ import com.sp1r1n.app.homework.lesson6.BubbleSort;
 import com.sp1r1n.app.homework.lesson6.Computing;
 import com.sp1r1n.app.homework.lesson6.RandomArray;
 
-import static com.sp1r1n.app.homework.lesson6.RandomArray.createArrayRandom;
-import static com.sp1r1n.app.homework.lesson6.RandomArray.createMatrixRandom;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -15,25 +12,21 @@ import java.util.Scanner;
  */
 public class Lesson6Runner {
 
-    static String readline;
-    static RandomArray randomArray;
-    static BubbleSort bubbleSort;
-    static Computing computing;
-    static Scanner scanner;
-    static ArrayList<String> list;
-    static int[] array;
-    static int[][] matrix;
-    static int columns;
-    static int rows;
-    static int max;
-    static int min;
 
     public static void main(String[] args) {
-        randomArray = new RandomArray();
-        bubbleSort = new BubbleSort();
-        computing = new Computing();
-        scanner = new Scanner(System.in);
-        list = new ArrayList<>();
+        String readline = new String();
+        RandomArray randomArray = new RandomArray();
+        BubbleSort bubbleSort = new BubbleSort();
+        Computing computing = new Computing();
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<String> list = new ArrayList<>();
+        int[] array;
+        int[][] matrix;
+        int columns;
+        int rows;
+        int max;
+        int min;
+
         do try {
             System.out.print("\n___________________________\nPlease select any function:\n" +
                     "a. Create array with even numbers (2-20)\n" +
@@ -44,11 +37,10 @@ public class Lesson6Runner {
                     "g. Same as 'e' point but with alignment  \n" +
                     "h. Create your own list  \n" +
                     "type 'exit' for exit\n____________________\n");
-            Scanner scanner = new Scanner(System.in);
-            readline = scanner.nextLine();
+            readline = scanner.next();
             switch (readline) {
                 case "a":
-                    array = createArrayRandom(20, true, true);
+                    array = randomArray.createArrayRandom(20, true, true);
                     bubbleSort.bubbleSortAsc(array);
                     for (int i = 0; i < array.length; i++)
                         System.out.print(array[i] + " ");
@@ -57,7 +49,7 @@ public class Lesson6Runner {
                         System.out.println(array[i]);
                     break;
                 case "b":
-                    array = createArrayRandom(99, false, true);
+                    array = randomArray.createArrayRandom(99, false, true);
                     bubbleSort.bubbleSortAsc(array);
                     for (int i = 0; i < array.length; i++)
                         System.out.print(array[i] + " ");
@@ -68,7 +60,7 @@ public class Lesson6Runner {
                     break;
                 case "c":
                     int count = 0;
-                    array = createArrayRandom(15, 9);
+                    array = randomArray.createArrayRandom(15, 9);
                     for (int i = 0; i < array.length; i++) {
                         System.out.print(array[i] + " ");
                         if (EvenOdd.isEven(array[i]))
@@ -77,7 +69,7 @@ public class Lesson6Runner {
                     System.out.print("\nNumber of even numbers: " + count);
                     break;
                 case "d":
-                    array = createArrayRandom(15, 999);
+                    array = randomArray.createArrayRandom(15, 999);
                     for (int i = 0; i < array.length; i++)
                         System.out.print(array[i] + " ");
                     bubbleSort.bubbleSortAsc(array);
@@ -94,7 +86,7 @@ public class Lesson6Runner {
                     min = scanner.nextInt();
                     System.out.println("Please input max value: ");
                     max = scanner.nextInt();
-                    matrix = createMatrixRandom(columns, rows, min, max);
+                    matrix = randomArray.createMatrixRandom(columns, rows, min, max);
                     for (int i = 0; i < columns; ++i, System.out.println())
                         for (int j = 0; j < rows; ++j)
                             System.out.print(matrix[i][j] + " ");
@@ -108,7 +100,7 @@ public class Lesson6Runner {
                     min = scanner.nextInt();
                     System.out.println("Please input max value: ");
                     max = scanner.nextInt();
-                    matrix = createMatrixRandom(columns, rows, min, max);
+                    matrix = randomArray.createMatrixRandom(columns, rows, min, max);
                     int length;
                     int maxspaces;
                     String spaces;

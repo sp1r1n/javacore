@@ -8,14 +8,18 @@ import java.util.Scanner;
  * Created by DELL on 2/6/2017.
  */
 public class List {
-    static ArrayList<String> outputList;
+    ArrayList<String> outputList;
 
-    public static ArrayList<String> createList(int index, String inputvalue){
+    public List(){
+        outputList = new ArrayList<>();
+    }
+
+    public ArrayList<String> createList(int index, String inputvalue){
         outputList.set(index, inputvalue);
         return (outputList);
     }
 
-    public static ArrayList<String> createList(String inputvalue){
+    public ArrayList<String> createList(String inputvalue){
         outputList.add(inputvalue);
         return (outputList);
     }

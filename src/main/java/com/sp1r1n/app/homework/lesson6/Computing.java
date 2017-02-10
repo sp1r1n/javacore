@@ -2,14 +2,16 @@ package com.sp1r1n.app.homework.lesson6;
 
 import java.util.ArrayList;
 
-import static com.sp1r1n.app.homework.lesson6.RandomArray.createArrayRandom;
-
 /**
  * Created by Denis on 08.02.2017.
  */
 public class Computing {
     int outputvalue;
-    static BubbleSort bubbleSort;
+    BubbleSort bubbleSort;
+
+    public Computing(){
+        bubbleSort = new BubbleSort();
+    }
 
     public int maxValue(int[] inputArray){
         bubbleSort.bubbleSortDesc(inputArray);
@@ -47,15 +49,5 @@ public class Computing {
             spacesToAdd = spacesToAdd + " ";
         }
         return spacesToAdd;
-    }
-
-    public static void main(String[] args) {
-        bubbleSort = new BubbleSort();
-        int[] array = createArrayRandom();
-        Computing computing = new Computing();
-        System.out.println(computing.minValue(array));;
-        for (int i = 0; i < array.length; i++){
-            System.out.println(array[i]);
-        }
     }
 }

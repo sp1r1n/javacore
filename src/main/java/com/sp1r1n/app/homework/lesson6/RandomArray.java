@@ -9,9 +9,13 @@ import java.util.stream.IntStream;
  */
 public class RandomArray {
     static int[] outputArray;
+    Random random;
 
-    public static int[] createArrayRandom () {
-        Random random = new Random();
+    public RandomArray(){
+        random = new Random();
+    }
+
+    public int[] createArrayRandom() {
         outputArray = new int[20];
         int i = 0;
         do {
@@ -23,8 +27,7 @@ public class RandomArray {
         return outputArray;
     }
 
-    public static int[] createArrayRandom (int length) {
-        Random random = new Random();
+    public int[] createArrayRandom (int length) {
         outputArray = new int[length];
         int i = 0;
         do {
@@ -36,8 +39,7 @@ public class RandomArray {
         return outputArray;
     }
 
-    public static int[] createArrayRandom (int length, int maxvalue) {
-        Random random = new Random();
+    public int[] createArrayRandom (int length, int maxvalue) {
         outputArray = new int[length];
         int i = 0;
         do {
@@ -49,8 +51,7 @@ public class RandomArray {
         return outputArray;
     }
 
-    public static int[] createArrayRandom (int length, int maxvalue, boolean iseven) {
-        Random random = new Random();
+    public int[] createArrayRandom (int length, int maxvalue, boolean iseven) {
         outputArray = new int[length];
         int i = 0;
         do {
@@ -64,8 +65,7 @@ public class RandomArray {
         return outputArray;
     }
 
-    public static int[] createArrayRandom (int maxvalue, boolean iseven, boolean unique) {
-        Random random = new Random();
+    public int[] createArrayRandom (int maxvalue, boolean iseven, boolean unique) {
         outputArray = new int[maxvalue/2];
         int i = 0;
         do {
@@ -88,8 +88,7 @@ public class RandomArray {
         return outputArray;
     }
 
-    public static int[][] createMatrixRandom (int n, int m, int minvalue, int maxvalue) {
-        Random random = new Random();
+    public int[][] createMatrixRandom (int n, int m, int minvalue, int maxvalue) {
         int[][] matrix = new int[n][m];
         for (int i = 0; i < n; i++)
             for (int j = 0; j < m; j++)
