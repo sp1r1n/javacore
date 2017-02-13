@@ -1,6 +1,8 @@
 package com.sp1r1n.app.homework.lesson6;
 
 import com.sp1r1n.app.classwork.lesson4.EvenOdd;
+
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.IntStream;
 
@@ -94,5 +96,23 @@ public class RandomArray {
             for (int j = 0; j < m; j++)
                 matrix[i][j] = random.nextInt(maxvalue - minvalue + 1) + minvalue;
         return matrix;
+    }
+
+    public static void main(String[] args) {
+        /*Random random = new Random();
+        int n = 9;
+        int m = 9;
+        int maxvalue = 9;
+        int minvalue = 2;
+        int[][] matrix = new int[n][m];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                boolean contains = IntStream.of(matrix).(x -> x == n);
+                if (contains == true) {
+                    matrix[i][j] = random.nextInt(maxvalue - minvalue + 1) + minvalue;
+                    System.out.println(matrix[i][j]);
+                }
+            }
+        }*/
     }
 }
