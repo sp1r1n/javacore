@@ -13,6 +13,8 @@ public class Lesson9Runner {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please input some string: ");
         String input = scanner.nextLine();
-        System.out.println(palyndrom.isPalindromic(input));
+        System.out.println(palyndrom.isPalindromicFirst(input));
+        System.out.println(palyndrom.isPalindromicSecond(input));
+        System.out.println(palyndrom.isPalindromicThird(input));
     }
 }

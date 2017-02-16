@@ -7,10 +7,10 @@ import java.util.Scanner;
 /**
  * Created by DELL on 2/6/2017.
  */
-public class List {
+public class Lists {
     ArrayList<String> outputList;
 
-    public List(){
+    public Lists(){
         outputList = new ArrayList<>();
     }
 
@@ -21,6 +21,13 @@ public class List {
 
     public ArrayList<String> createList(String inputvalue){
         outputList.add(inputvalue);
+        return (outputList);
+    }
+
+    public ArrayList<String> arrayToList(String[] inputArray){
+        for (int i = 0; i < inputArray.length; i++){
+            outputList.add(inputArray[i]);
+        }
         return (outputList);
     }
 }

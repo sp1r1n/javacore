@@ -107,7 +107,7 @@ public class Lesson6Runner {
                     for (int i = 0; i < columns; ++i, System.out.println()) {
                         length = computing.numberLength(i);
                         maxspaces = computing.numberLength(rows);
-                        System.out.print("List " + i + ":" + computing.addSpaces(length, maxspaces));
+                        System.out.print("Lists " + i + ":" + computing.addSpaces(length, maxspaces));
                         for (int j = 0; j < rows; ++j) {
                             length = computing.numberLength(matrix[i][j]);
                             maxspaces = computing.numberLength(max);
