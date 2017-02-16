@@ -1,5 +1,7 @@
 package com.sp1r1n.app.homework.lesson8;
 
+import java.util.Scanner;
+
 /**
  * Created by Denis on 13.02.2017.
  */

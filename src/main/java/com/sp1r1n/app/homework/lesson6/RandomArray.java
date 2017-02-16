@@ -5,6 +5,7 @@ import com.sp1r1n.app.classwork.lesson4.EvenOdd;
 import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 /**
  * Created by DELL on 2/6/2017.

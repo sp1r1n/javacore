@@ -13,7 +13,7 @@ import java.util.Collections;
 public class Palyndrom {
     boolean result;
 
-    public boolean isPalindromicFirst(String input){
+    public boolean isPalindromicLoop(String input){
         String[] array = input.toLowerCase().split("");
         result = false;
         int count = 0;
@@ -25,7 +25,7 @@ public class Palyndrom {
         return result;
     }
 
-    public boolean isPalindromicSecond(String input){
+    public boolean isPalindromicHalf(String input){
         String[] array = input.toLowerCase().split("");
         boolean result = false;
         String left = "";
@@ -40,7 +40,7 @@ public class Palyndrom {
         return result;
     }
 
-    public boolean isPalindromicThird(String input) {
+    public boolean isPalindromicReverse(String input) {
         Lists lists = new Lists();
         String[] inputArray = input.split("");
         ArrayList<String> newList;
