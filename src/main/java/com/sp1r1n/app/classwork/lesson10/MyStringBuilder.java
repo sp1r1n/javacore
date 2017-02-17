@@ -6,8 +6,8 @@ import java.util.Arrays;
  * Created by DELL on 2/16/2017.
  */
 public class MyStringBuilder {
-    String plainText = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ";
-    String cypherText = "DEFGHIGKL012efghijklm3456UVWXYZ7MNOaxyz bcdnopqrstuvwPQRST89ABC";
+    String plainText = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    String cypherText = "DEFGHIGKL012efghijklm3456UVWXYZ7MNOaxyzbcdnopqrstuvwPQRST89ABC";
     StringBuilder stringBuilder;
 
     public String[] findWords(String input){
@@ -48,6 +48,8 @@ public class MyStringBuilder {
         }
         return stringBuilder.toString();
     }
+
+
 
     public static void main(String[] args) {
         MyStringBuilder stringBuilder = new MyStringBuilder();
