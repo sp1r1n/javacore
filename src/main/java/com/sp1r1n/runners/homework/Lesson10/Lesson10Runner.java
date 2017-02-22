@@ -17,13 +17,13 @@ public class Lesson10Runner {
         do {
             try {
                 System.out.print("\n___________________________\nPlease select any function:\n");
-                readLine = scanner.next();
+                readLine = scanner.nextLine();
                 switch (readLine) {
-                    case "a":
+                    case "b":
                         System.out.println("Input some delimiter: ");
-                        String delimiter = scanner.next();
+                        String delimiter = scanner.nextLine();
                         System.out.println("Imput some string using your delimiter: ");
-                        String userString = scanner.next();
+                        String userString = scanner.nextLine();
                         String formattedText = "";
                         List<String> userList = arrayParser.listParse(userString, delimiter);
                         for (String value : userList)
