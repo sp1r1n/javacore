@@ -7,7 +7,7 @@ import java.util.Scanner;
  */
 public class SelectionSort {
 
-    public static int[] doSelectionSortAsc(int[] arr) {
+    public int[] doSelectionSortAsc(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             int index = i;
             for (int j = i + 1; j < arr.length; j++)
@@ -21,7 +21,7 @@ public class SelectionSort {
         return arr;
     }
 
-    public static int[] doSelectionSortDesc(int[] arr) {
+    public int[] doSelectionSortDesc(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             int index = i;
             for (int j = i + 1; j < arr.length; j++)

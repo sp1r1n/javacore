@@ -13,8 +13,8 @@ public class Lesson9Runner {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please input some string: ");
         String input = scanner.nextLine();
-        System.out.println("1st method" + palyndrom.isPalindromicLoop(input));
-        System.out.println("2nd method" + palyndrom.isPalindromicHalf(input));
-        System.out.println("3rd method" + palyndrom.isPalindromicReverse(input));
+        System.out.println("1st method " + palyndrom.isPalindromicLoop(input));
+        System.out.println("2nd method " + palyndrom.isPalindromicHalf(input));
+        System.out.println("3rd method " + palyndrom.isPalindromicReverse(input));
     }
 }
