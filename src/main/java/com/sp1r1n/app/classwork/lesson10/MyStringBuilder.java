@@ -6,8 +6,8 @@ import java.util.Arrays;
  * Created by DELL on 2/16/2017.
  */
 public class MyStringBuilder {
-    String plainText = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    String cypherText = "DEFGHIGKL012efghijklm3456UVWXYZ7MNOaxyzbcdnopqrstuvwPQRST89ABC";
+    String plainText = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ";
+    String cypherText = "QWERTYUIOPqwertyuiopASDFGHJKL 12345asdfghjklZXCVBNM67890zxcvbnm";
     StringBuilder stringBuilder;
 
     public String[] findWords(String input){
@@ -47,17 +47,6 @@ public class MyStringBuilder {
             }
         }
         return stringBuilder.toString();
-    }
-
-
-
-    public static void main(String[] args) {
-        MyStringBuilder stringBuilder = new MyStringBuilder();
-        char[] charArrayToString = {'a','b','c','d'};
-        System.out.println("Decoded: " + stringBuilder.stringEncode("hello"));
-        System.out.println("Encoded: " + stringBuilder.stringDecode("nbrru"));
-        System.out.println("Converted to string: " + stringBuilder.charArrayToString(charArrayToString));
-        System.out.print("Find words: " + Arrays.toString(stringBuilder.findWords("dsflkj dsklfsdkf,lkdsfjldskjf,dlskfdkd,dsfjkds")));
     }
 }
 
