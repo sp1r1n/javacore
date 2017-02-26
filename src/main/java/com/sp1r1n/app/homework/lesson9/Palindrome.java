@@ -10,7 +10,7 @@ import java.util.Collections;
 /**
  * Created by Denis on 2/16/2017.
  */
-public class Palyndrom {
+public class Palindrome {
     boolean result;
 
     public boolean isPalindromicLoop(String input){

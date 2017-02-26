@@ -1,5 +1,7 @@
 package com.sp1r1n.app.homework.lesson6;
 
+import com.sp1r1n.app.homework.lesson10.StringSort;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
