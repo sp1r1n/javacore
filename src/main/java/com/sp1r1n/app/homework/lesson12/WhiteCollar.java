@@ -20,6 +20,6 @@ public class WhiteCollar extends Human {
             this.companyName = companyName;
             return "Company Name is set";
         }
-        else return "Company Name is not valid. Accepted characters: A-Z;a-z; point, comma, space, dash";
+        else return "Company Name is not valid. Accepted characters: A-z; point, comma, space, dash";
     }
 }

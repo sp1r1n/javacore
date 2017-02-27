@@ -19,15 +19,18 @@ public class Palindrome {
         int count = 0;
         int i;
         for (i = 0; i < array.length; i++)
-            if (array[i].equals(array[(array.length - 1) - i])) count++;
-        if (count == i)
+            if (array[i].equals(array[(array.length - 1) - i])) {
+                count++;
+            }
+        if (count == i) {
             result = true;
+        }
         return result;
     }
 
     public boolean isPalindromicHalf(String input){
         String[] array = input.toLowerCase().split("");
-        boolean result = false;
+        result = false;
         String left = "";
         String right = "";
         for (int i = 0; i < array.length/2; i++){

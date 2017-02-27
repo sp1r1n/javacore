@@ -32,7 +32,7 @@ public class Human {
             this.name = name;
             return "Name is set";
         }
-        else return "Name is not valid. Accepted characters: A-Z;a-z; point, comma, space, dash";
+        else return "Name is not valid. Accepted characters: A-z; point, comma, space, dash";
     }
 
     public static boolean checkName(String userNameString){

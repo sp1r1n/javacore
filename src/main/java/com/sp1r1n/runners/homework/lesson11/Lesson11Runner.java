@@ -69,7 +69,7 @@ public class Lesson11Runner {
                     listStr = (ArrayList<String>) arrayParser.listParse(readText, "\n");
                     writeText = "";
                     for (String s : listStr) {
-                        if (palindrome.isPalindromicLoop(s) == true)
+                        if (palindrome.isPalindromicLoop(s))
                             writeText += s + " is palindrome\n";
                         else writeText += s + " is not palindrome\n";
                     }

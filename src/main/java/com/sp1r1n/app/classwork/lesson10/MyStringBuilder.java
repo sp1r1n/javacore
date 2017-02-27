@@ -37,7 +37,7 @@ public class MyStringBuilder {
     }
 
     public String stringDecode (String stringToDecode){
-        StringBuilder stringBuilder = new StringBuilder(stringToDecode);
+        stringBuilder = new StringBuilder(stringToDecode);
         for (int i = 0; i < stringBuilder.length(); i++){
             for (int j = 0; j < plainText.length(); j++){
                 if (stringBuilder.charAt(i) == cypherText.charAt(j)){
