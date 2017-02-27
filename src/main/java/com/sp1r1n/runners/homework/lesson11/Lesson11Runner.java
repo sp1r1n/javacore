@@ -5,7 +5,6 @@ import com.sp1r1n.app.homework.lesson11.FileWorker;
 import com.sp1r1n.app.homework.lesson6.BubbleSort;
 import com.sp1r1n.app.homework.lesson9.Palindrome;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 

@@ -34,17 +34,6 @@ public class FileWorker {
         return output;
     }
 
-
-    public ArrayList<String> readToList(String line){
-        ArrayList<String> outputList = new ArrayList<>();
-            int index = 0;
-            while (line != null){
-                outputList.add(index, line);
-                index++;
-            }
-        return outputList;
-    }
-
     private static void exists(String fileName) throws FileNotFoundException {
         File file = new File(fileName);
         if (!file.exists()){
