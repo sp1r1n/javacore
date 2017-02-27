@@ -5,6 +5,7 @@ import com.sp1r1n.app.homework.lesson11.FileWorker;
 import com.sp1r1n.app.homework.lesson6.BubbleSort;
 import com.sp1r1n.app.homework.lesson9.Palindrome;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
@@ -21,35 +22,73 @@ public class Lesson11Runner {
         Scanner scanner = new Scanner(System.in);
         String readLine;
         String readText;
-        String writeText = "";
+        String writeText;
+        String path = "";
+        String fileName = "";
+        String[] arrayPath;
         do try {
+            System.out.print("Enter working path: ");
+            path = scanner.next();
+            arrayPath = arrayParser.arrayParse(path, "");
+            if (!arrayPath[1].equals(":")  || !arrayPath[2].equals("\\")) {
+                do {
+                    System.out.println("Please specify correct path, e.g.: E:\\some_folder\\");
+                    path = scanner.next();
+                    arrayPath = arrayParser.arrayParse(path, "");
+                }
+                while (!arrayPath[1].equals(":")  || !arrayPath[2].equals("\\"));
+            }
+            path = fileWorker.pathFix(path);
+            System.out.flush();
             System.out.print("\n___________________________\nPlease select any function:\n" +
-                    "1: b&c point in homework: arrayparser with delimeter\n" +
-                    "2: enigma\n" +
-                    "3: caesar\n" +
+                    "1: read numbers from file, sort them, write to another file\n" +
+                    "2: read words from file, define if it's palindrome, write to another file\n" +
+                    "3: read user input, write to another file\n" +
                     "type 'exit' for exit\n____________________\n");
             readLine = scanner.next();
             switch (readLine) {
                 case "1":
-                    readText = fileWorker.read("E:\\test\\test.txt").replaceAll("\\p{Cntrl}", "");
+                    System.out.print("Please enter filename: ");
+                    fileName = path + scanner.next();
+                    readText = fileWorker.read(fileName).replaceAll("\\p{Cntrl}", "");
                     listStr = (ArrayList<String>) arrayParser.listParse(readText, ",");
+                    writeText = "";
                     for (int i = 0; i < listStr.size(); i++)
                         listInt.add(i, Integer.parseInt(listStr.get(i)));
                     bubbleSort.bubbleSortAsc(listInt);
                     for (int i : listInt)
                         writeText += i + "\n";
-                    fileWorker.write("E:\\test\\output.txt", writeText);
+                    fileWorker.write(path + "output1.txt", writeText);
+                    System.out.println("DONE Check your file!\n_________________");
                     break;
                 case "2":
+                    System.out.print("Please enter filename: ");
+                    fileName = path + scanner.next();
                     Palindrome palindrome = new Palindrome();
-                    readText = fileWorker.read("E:\\test\\task2.txt");
+                    readText = fileWorker.read(fileName);
                     listStr = (ArrayList<String>) arrayParser.listParse(readText, "\n");
-                    for (String s : listStr){
+                    writeText = "";
+                    for (String s : listStr) {
                         if (palindrome.isPalindromicLoop(s) == true)
                             writeText += s + " is palindrome\n";
                         else writeText += s + " is not palindrome\n";
                     }
-                    fileWorker.write("E:\\test\\output2.txt", writeText);
+                    fileWorker.write(path + "output2.txt", writeText);
+                    System.out.println("DONE Check your file!\n_________________");
+                    break;
+                case "3":
+                    System.out.println("Please enter filename: ");
+                    fileName = path + scanner.next();
+                    writeText = "";
+                    System.out.println("Hold entering some words. Press enter to separate them. Enter 'exit' when done: ");
+                    do {
+                        readLine = scanner.nextLine();
+                        writeText += readLine + "\n";
+                    }
+                    while (!readLine.equals("exit"));
+                    fileWorker.write(fileName, writeText);
+                    System.out.println("DONE Check your file!\n_________________");
+                    break;
                 case "exit":
                     break;
                 default:

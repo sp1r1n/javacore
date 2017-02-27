@@ -1,7 +1,10 @@
 package com.sp1r1n.app.homework.lesson11;
 
+import com.sp1r1n.app.homework.lesson10.ArrayParser;
+
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import static java.nio.file.Files.exists;
 
@@ -15,6 +18,22 @@ public class FileWorker {
     /*public FileWorker(String path){
         this.path = path;
     }*/
+
+    public String pathFix(String inputPath){
+        ArrayParser arrayParser = new ArrayParser();
+        String[] arrayPath = arrayParser.arrayParse(inputPath, "");
+        for (int i = 0; i < arrayPath.length; i++){
+            if (arrayPath[i].equals("/"))
+                arrayPath[i] = "\\";
+        }
+        if (!arrayPath[arrayPath.length-1].equals("\\"))
+            arrayPath[arrayPath.length-1] += "\\";
+        String output = "";
+        for (String s : arrayPath)
+            output += s;
+        return output;
+    }
+
 
     public ArrayList<String> readToList(String line){
         ArrayList<String> outputList = new ArrayList<>();
@@ -76,5 +95,9 @@ public class FileWorker {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
+        FileWorker fileWorker = new FileWorker();
+        Scanner scanner = new Scanner(System.in);
+        String path = scanner.next();
+        System.out.print(fileWorker.pathFix(path));
     }
 }
