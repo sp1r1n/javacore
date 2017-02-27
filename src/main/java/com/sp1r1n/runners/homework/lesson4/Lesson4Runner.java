@@ -48,7 +48,7 @@ public class Lesson4Runner {
                 }
             }
             catch (Exception e) {
-                System.out.print("Error: Please input correct value\n");
+                System.out.print("Error: Please input correct value\n" + e);
             }
         }
         while (i != 0);

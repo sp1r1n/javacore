@@ -18,7 +18,7 @@ public class Lesson6Runner {
         RandomArray randomArray = new RandomArray();
         BubbleSort bubbleSort = new BubbleSort();
         Computing computing = new Computing();
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner;
         ArrayList<String> list = new ArrayList<>();
         int[] array;
         int[][] matrix;
@@ -37,6 +37,7 @@ public class Lesson6Runner {
                     "g. Same as 'e' point but with alignment  \n" +
                     "h. Create your own list  \n" +
                     "type 'exit' for exit\n____________________\n");
+            scanner = new Scanner(System.in);
             readline = scanner.next();
             switch (readline) {
                 case "a":
@@ -132,7 +133,7 @@ public class Lesson6Runner {
                     System.out.print("No such point here\n");
             }
         } catch (Exception e) {
-            System.out.print("Error: Value is not correct. Try again\n");
+            System.out.print("Error: Value is not correct. Try again\n" + e);
         }
         while (!readline.equals("exit"));
     }

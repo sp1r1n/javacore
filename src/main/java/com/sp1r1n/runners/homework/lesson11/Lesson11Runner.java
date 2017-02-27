@@ -19,14 +19,15 @@ public class Lesson11Runner {
         ArrayParser arrayParser = new ArrayParser();
         FileWorker fileWorker = new FileWorker();
         BubbleSort bubbleSort = new BubbleSort();
-        Scanner scanner = new Scanner(System.in);
-        String readLine;
+        Scanner scanner;
+        String readLine = "";
         String readText;
         String writeText;
-        String path = "";
-        String fileName = "";
+        String path;
+        String fileName;
         String[] arrayPath;
         do try {
+            scanner = new Scanner(System.in);
             System.out.print("Enter working path: ");
             path = scanner.next();
             arrayPath = arrayParser.arrayParse(path, "");
@@ -95,8 +96,8 @@ public class Lesson11Runner {
                     System.out.print("No such point here\n");
             }
         } catch (Exception e) {
-            System.out.print("Error: Value is not correct. Try again\n");
+            System.out.print("Error: Value is not correct. Try again\n" + e);
         }
-        while (true);
+        while (!readLine.equals("exit"));
     }
 }

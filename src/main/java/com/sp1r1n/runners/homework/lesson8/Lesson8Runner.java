@@ -16,7 +16,7 @@ public class Lesson8Runner {
 
     public static void main(String[] args) {
         String readline = new String();
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner;
         int[] array;
         int[][] matrix;
         RandomArray randomArray = new RandomArray();
@@ -29,6 +29,7 @@ public class Lesson8Runner {
                     "b. selection sort\n" +
                     "c. 2d random array + maxvalue\n" +
                     "type 'exit' for exit\n____________________\n");
+            scanner = new Scanner(System.in);
             readline = scanner.next();
             switch (readline) {
                 case "a":
@@ -54,7 +55,7 @@ public class Lesson8Runner {
                     System.out.print("No such point here\n");
             }
         } catch (Exception e) {
-            System.out.print("Error: Value is not correct. Try again\n");
+            System.out.print("Error: Value is not correct. Try again\n" + e);
         }
         while (!readline.equals("exit"));
     }
