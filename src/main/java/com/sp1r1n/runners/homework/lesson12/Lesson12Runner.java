@@ -2,9 +2,7 @@ package com.sp1r1n.runners.homework.lesson12;
 
 import com.sp1r1n.app.homework.lesson12.Human;
 import com.sp1r1n.app.homework.lesson12.WhiteCollar;
-import com.sp1r1n.app.homework.lesson9.Palindrome;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
