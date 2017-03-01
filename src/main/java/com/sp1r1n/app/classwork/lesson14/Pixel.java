@@ -16,4 +16,5 @@ public class Pixel {
         int[] res = {x, y};
         return res;
     }
+
 }
