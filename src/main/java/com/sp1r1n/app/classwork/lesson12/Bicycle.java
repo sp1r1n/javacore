@@ -45,17 +45,4 @@ public class Bicycle {
         return "\nWroom!";
     }
 
-    public static void main(String[] args) {
-        Bicycle bicycle = new Bicycle();
-        Bicycle bicycletwo = new Bicycle(2);
-        Bicycle bicyclethree = new Bicycle(3, "blue");
-        Bicycle bicyclefour = new Bicycle(4, "yellow", 5);
-        Bicycle bicyclefive = new Bicycle(5, "black", 33, true);
-        System.out.println("First bicycle: " + bicycle.color + " " + bicycle.isBig + " " + bicycle.speed + " " + bicycle.wheelSize + " " + bicycle.ride());
-        System.out.println("Second bicycle: " + bicycletwo.color + " " + bicycletwo.isBig + " " + bicycletwo.speed + " " + bicycletwo.wheelSize + " " + bicycletwo.ride());
-        System.out.println("Third bicycle: " + bicyclethree.color + " " + bicyclethree.isBig + " " + bicyclethree.speed + " " + bicyclethree.wheelSize + " " + bicyclethree.ride());
-        System.out.println("Fourth bicycle: " + bicyclefour.color + " " + bicyclefour.isBig + " " + bicyclefour.speed + " " + bicyclefour.wheelSize + " " + bicyclefour.ride());
-        System.out.println("Fifth bicycle: " + bicyclefive.color + " " + bicyclefive.isBig + " " + bicyclefive.speed + " " + bicyclefive.wheelSize + " " + bicyclefive.ride());
-    }
-
 }

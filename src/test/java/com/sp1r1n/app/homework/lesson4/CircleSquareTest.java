@@ -14,32 +14,32 @@ import static org.junit.Assert.*;
  * Created by Denis on 27.01.2017.
  */
 public class CircleSquareTest {
-    //CircleSquare circleSquare;
+    CircleSquare circleSquare;
 
-    @BeforeClass
+    @Before
     public void init(){
-        CircleSquare circleSquare = new CircleSquare();
+        circleSquare = new CircleSquare();
     }
 
     @Test
     public void calculateCheckArea1() throws Exception {
-        assertTrue("Test1 failed\n", CircleSquare.calculateCheck(5.0, 4.0)[0]);
+        assertTrue("Test1 failed\n", circleSquare.calculateCheck(5.0, 4.0)[0]);
     }
 
     @Test
     public void calculateCheckArea2() throws Exception {
-        assertTrue("Test2 failed\n", CircleSquare.calculateCheck(4.0, 5.0)[1]);
+        assertTrue("Test2 failed\n", circleSquare.calculateCheck(4.0, 5.0)[1]);
     }
 
     @Test
     public void calculateCheckEquals() throws Exception {
-        assertTrue("Test3 failed\n", CircleSquare.calculateCheck(5.0, 5.0)[2]);
+        assertTrue("Test3 failed\n", circleSquare.calculateCheck(5.0, 5.0)[2]);
     }
 
     @Test
     public void calculateCheckEqualsFalse() throws Exception {
         boolean[] expRes = {false, false, true};
-        Assert.assertArrayEquals(CircleSquare.calculateCheck(5.0, 5.0), expRes);
+        Assert.assertArrayEquals(circleSquare.calculateCheck(5.0, 5.0), expRes);
     }
 
 

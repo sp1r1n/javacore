@@ -12,20 +12,20 @@ import static org.junit.Assert.*;
  * Created by Denis on 30.01.2017.
  */
 public class EvenOddTest {
+    EvenOdd evenOdd;
 
-
-    @BeforeClass
+    @Before
     public void init() {
-        EvenOdd evenOdd = new EvenOdd();
+        evenOdd = new EvenOdd();
     }
 
     @Test
     public void isEvenTrue() throws Exception {
-        Assert.assertTrue("Test 1 is failed", EvenOdd.isEven(4));
+        Assert.assertTrue("Test 1 is failed", evenOdd.isEven(4));
     }
 
     @Test
     public void isEvenFalse() throws Exception {
-        Assert.assertFalse("Test 2 is failed", EvenOdd.isEven(3));
+        Assert.assertFalse("Test 2 is failed", evenOdd.isEven(3));
     }
 }

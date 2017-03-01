@@ -1,16 +1,12 @@
 package com.sp1r1n.app.homework.lesson10;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by Denis on 2/23/2017.
  */
 public class Caesar {
-
+    String s = "";
 
     public String doEncrypt(String msg, int shift){
-        String s = "";
         int len = msg.length();
         for(int x = 0; x < len; x++){
             char c = (char)(msg.charAt(x) + shift);
@@ -23,7 +19,6 @@ public class Caesar {
     }
 
     public String doDecrypt(String msg, int shift){
-        String s = "";
         int len = msg.length();
         for(int x = 0; x < len; x++){
             char c = (char)(msg.charAt(x) - shift);

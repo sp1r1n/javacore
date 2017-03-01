@@ -12,19 +12,20 @@ import static org.junit.Assert.*;
  * Created by DELL on 1/29/2017.
  */
 public class RightAngleTest {
-
-    @BeforeClass
-    public static void init(){
-        RightAngle rightAngle = new RightAngle();
+    RightAngle rightAngle;
+    @Before
+    public void init(){
+        rightAngle = new RightAngle();
     }
+
     @Test
     public void isRightAngleTrue() throws Exception {
-        Assert.assertTrue(RightAngle.isRightAngle(6, 8, 10));
+        Assert.assertTrue(rightAngle.isRightAngle(6, 8, 10));
     }
 
     @Test
     public void isRightAngleFalse() throws Exception {
-        Assert.assertTrue(RightAngle.isRightAngle(7, 9, 11));
+        Assert.assertFalse(rightAngle.isRightAngle(7, 9, 11));
     }
 
 }
