@@ -1,10 +1,7 @@
 package com.sp1r1n.app.homework.lesson6;
 
-import com.sp1r1n.app.homework.lesson10.StringSort;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
 
 /**
  * Created by DELL on 2/6/2017.
@@ -31,5 +28,15 @@ public class Lists {
             outputList.add(inputArray[i]);
         }
         return (outputList);
+    }
+
+    public int[] listToArray (ArrayList<Integer> inputList){
+        int[] outputArray = new int[inputList.size()];
+        int index = 0;
+        for (int i : inputList) {
+            outputArray[index] = i;
+            index++;
+        }
+        return outputArray;
     }
 }

@@ -5,7 +5,7 @@ import java.util.Arrays;
  * Created by DELL on 1/24/2017.
  */
 public class ArraySorting {
-    public static int[] sortInputArray (int[] inputArray){
+    public int[] sortInputArray (int[] inputArray){
         System.out.print("Initial array: ");
         for (int i = 0; i < inputArray.length; i++)
         {

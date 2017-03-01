@@ -15,12 +15,12 @@ public class MyStringBuilder {
         return array;
     }
 
-    public StringBuilder charArrayToString(char[] inputCharArray){
+    public String charArrayToString(char[] inputCharArray){
         stringBuilder = new StringBuilder();
         for (char value : inputCharArray){
             stringBuilder = stringBuilder.append(value);
         }
-        return stringBuilder;
+        return stringBuilder.toString();
     }
 
     public String stringEncode (String stringToEncode){

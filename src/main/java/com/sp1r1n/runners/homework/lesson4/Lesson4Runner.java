@@ -10,8 +10,11 @@ import java.util.Scanner;
  * Created by DELL on 1/26/2017.
  */
 public class Lesson4Runner {
-    static int i;
+
     public static void main(String[] args) throws Exception {
+        int i = 0;
+        RightAngle rightAngle = new RightAngle();
+        CircleSquare circleSquare = new CircleSquare();
         do {
             try {
                 System.out.print("\nPlease select any function:\n" +
@@ -27,7 +30,7 @@ public class Lesson4Runner {
                         double circleRadius1 = scanner.nextDouble();
                         System.out.print("Please input radius 2: ");
                         double circleRadius2 = scanner.nextDouble();
-                        CircleSquare.calculateCheck(circleRadius1, circleRadius2);
+                        circleSquare.calculateCheck(circleRadius1, circleRadius2);
                         break;
                     case 2:
                         System.out.print("Even or Odd? Please input something: ");
@@ -36,11 +39,11 @@ public class Lesson4Runner {
                         break;
                     case 3:
                         double[] array = new double[3];
-                        for (int i = 0; i < array.length; i++) {
-                            System.out.print("Please input side " + i + ": ");
-                            array[i] = scanner.nextDouble();
+                        for (int j = 0; j < array.length; j++) {
+                            System.out.print("Please input side " + j + ": ");
+                            array[j] = scanner.nextDouble();
                         }
-                        RightAngle.isRightAngle(array[0], array[1], array[2]);
+                        rightAngle.isRightAngle(array[0], array[1], array[2]);
                         break;
                     case 0:
                         break;
