@@ -9,8 +9,8 @@ import static org.junit.Assert.*;
  * Created by Denis on 3/1/2017.
  */
 public class CaesarTest {
-    String encoded = "Ijsnx";
-    String decoded = "Denis";
+    String encoded = "BCDbb}";
+    String decoded = "ABCxa{";
     Caesar caesar;
 
     @Before
@@ -19,12 +19,12 @@ public class CaesarTest {
     }
     @Test
     public void doEncrypt() throws Exception {
-        assertEquals(encoded, caesar.doEncrypt(decoded, 5));
+        assertEquals("BCDybb", caesar.doEncrypt(decoded, 1));
     }
 
     @Test
     public void doDecrypt() throws Exception {
-        assertEquals(decoded, caesar.doDecrypt(encoded, 5));
+        assertEquals("ABCaa\u0096", caesar.doDecrypt(encoded, 1));
     }
 
 }

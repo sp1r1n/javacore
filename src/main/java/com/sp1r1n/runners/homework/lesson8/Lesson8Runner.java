@@ -23,6 +23,7 @@ public class Lesson8Runner {
         BubbleSort bubbleSort = new BubbleSort();
         SelectionSort selectionSort = new SelectionSort();
         Computing computing = new Computing();
+        ArrayPrint arrayPrint = new ArrayPrint();
         do try {
             System.out.print("\n___________________________\nLesson8. Please select any function:\n" +
                     "a. bubble sort asc/desc\n" +
@@ -35,19 +36,19 @@ public class Lesson8Runner {
                 case "a":
                     array = randomArray.createArrayRandom(10, 100);
                     bubbleSort.bubbleSortAsc(array);
-                    ArrayPrint.printlnArray(array);
+                    arrayPrint.printlnArray(array);
                     bubbleSort.bubbleSortDesc(array);
                     System.out.println();
-                    ArrayPrint.printlnArray(array);
+                    arrayPrint.printlnArray(array);
                     break;
                 case "b":
                     array = randomArray.createArrayRandom(10, 100);
                     selectionSort.doSelectionSortAsc(array);
-                    ArrayPrint.printlnArray(array);
+                    arrayPrint.printlnArray(array);
                     break;
                 case "c":
                     matrix = randomArray.createMatrixRandom(5, 8, -99, 99);
-                    ArrayPrint.printMatrix(matrix, 5, 8);
+                    arrayPrint.printMatrix(matrix, 5, 8);
                     computing.maxValue(matrix);
                 case "exit":
                     break;

@@ -53,6 +53,7 @@ public class RandomArrayTest {
     @Test
     public void createArrayRandom4() throws Exception {
         array = randomArray.createArrayRandom(100, true, true);
+        array = randomArray.createArrayRandom(100, true, false);
         assertTrue(array != null);
         array = null;
     }
