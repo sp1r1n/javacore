@@ -3,10 +3,6 @@ package com.sp1r1n.app.homework.lesson11;
 import com.sp1r1n.app.homework.lesson10.ArrayParser;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Scanner;
-
-import static java.nio.file.Files.exists;
 
 /**
  * Created by DELL on 2/23/2017.
@@ -34,7 +30,12 @@ public class FileWorker {
         return output;
     }
 
-    private static void exists(String fileName) throws FileNotFoundException {
+    public void delete(String fileName){
+        File file = new File(fileName);
+        file.delete();
+    }
+
+    public static void exists(String fileName) throws FileNotFoundException {
         File file = new File(fileName);
         if (!file.exists()){
             throw new FileNotFoundException(file.getName());
@@ -82,7 +83,4 @@ public class FileWorker {
             throw new RuntimeException(e);
         }
     }
-
-
-
 }

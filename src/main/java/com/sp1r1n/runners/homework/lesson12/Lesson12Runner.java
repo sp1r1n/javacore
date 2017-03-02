@@ -29,18 +29,18 @@ public class Lesson12Runner {
                     System.out.println("Print age");
                     age = scanner.nextInt();
                     System.out.println("Print name");
-                    name = scanner.nextLine();
+                    name = scanner.next();
                     human = new Human(age, name);
                     System.out.println("New human. Name: " + human.getName() + ", age: " + human.getAge());
                     do {
                         System.out.println("Do you want to change something?");
-                        readLine = scanner.nextLine();
+                        readLine = scanner.next();
                         switch (readLine){
                             case "y":
                                 System.out.println("Print age");
                                 System.out.println(human.setAge(scanner.nextInt()));
                                 System.out.println("Print name");
-                                System.out.println(human.setName(scanner.nextLine()));
+                                System.out.println(human.setName(scanner.next()));
                                 System.out.println("Human is changed. Name: " + human.getName() + ", age: " + human.getAge());
                                 break;
                             case "n":
@@ -55,9 +55,9 @@ public class Lesson12Runner {
                     System.out.println("Print age");
                     age = scanner.nextInt();
                     System.out.println("Print name");
-                    name = scanner.nextLine();
+                    name = scanner.next();
                     System.out.println("Print company");
-                    companyName = scanner.nextLine();
+                    companyName = scanner.next();
                     whiteCollar = new WhiteCollar(age, name, companyName);
                     System.out.println("New White Collar. Name: " + whiteCollar.getName() + ", age: " + whiteCollar.getAge()
                             + ", company: " + whiteCollar.getCompanyName());
