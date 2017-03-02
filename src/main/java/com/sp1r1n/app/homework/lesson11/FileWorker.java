@@ -13,15 +13,15 @@ import static java.nio.file.Files.exists;
  */
 public class FileWorker {
 
-    //private String path;
+    private String path;
 
-    /*public FileWorker(String path){
+    public FileWorker(String path){
         this.path = path;
-    }*/
+    }
 
-    public String pathFix(String inputPath){
+    public String pathFix(){
         ArrayParser arrayParser = new ArrayParser();
-        String[] arrayPath = arrayParser.arrayParse(inputPath, "");
+        String[] arrayPath = arrayParser.arrayParse(path, "");
         for (int i = 0; i < arrayPath.length; i++){
             if (arrayPath[i].equals("/"))
                 arrayPath[i] = "\\";
@@ -83,10 +83,6 @@ public class FileWorker {
         }
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
-        FileWorker fileWorker = new FileWorker();
-        Scanner scanner = new Scanner(System.in);
-        String path = scanner.next();
-        System.out.print(fileWorker.pathFix(path));
-    }
+
+
 }

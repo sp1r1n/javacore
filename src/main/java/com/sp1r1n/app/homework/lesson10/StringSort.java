@@ -6,7 +6,7 @@ import java.util.*;
  * Created by Denis on 2/17/2017.
  */
 public class StringSort {
-    public StringBuilder sortCaseIgnore(String input){
+    public String sortCaseIgnore(String input){
         ArrayParser arrayParser = new ArrayParser();
         List<String> myList = arrayParser.listParse(input, "");
         Collections.sort(myList, String.CASE_INSENSITIVE_ORDER);
@@ -15,7 +15,7 @@ public class StringSort {
         {
             sb.append(s);
         }
-        return sb;
+        return sb.toString();
     }
 
     public String sortStringAsc(String input){
@@ -25,15 +25,10 @@ public class StringSort {
         return sortedOutput;
     }
 
-    public StringBuilder sortStringDesc(String input){
+    public String sortStringDesc(String input){
         StringSort stringSort = new StringSort();
         input = stringSort.sortStringAsc(input);
         StringBuilder stringBuilder = new StringBuilder(input);
-        return stringBuilder.reverse();
-    }
-
-    public static void main(String[] args) {
-        StringSort stringSort = new StringSort();
-        System.out.print(stringSort.sortCaseIgnore("USDGsdfhgdfsg;lgsdfGDFU"));
+        return stringBuilder.reverse().toString();
     }
 }

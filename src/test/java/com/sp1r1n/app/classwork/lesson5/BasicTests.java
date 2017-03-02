@@ -17,10 +17,10 @@ public class BasicTests {
 // Assume that with the same input data each method should have some specific results
 // in practice difference between sorting methods is time,
 // but we will use earthier solution
-    private static final String INPUT_DATA = "src/test/resources/input.txt";
-    private static final String EXPECTED_RESULTS = "src/test/resources/expected.txt";
-    private static int[] inputData = null;
-    private static int[] expectedResults = null;
+    private static final String INPUT_DATA = "src/test/resources/BasicInput.txt";
+    private static final String EXPECTED_RESULTS = "src/test/resources/BasicExpected.txt";
+    private static int[] inputData = {1};
+    private static int[] expectedResults = {1};
 
     @BeforeClass // input data the same for all tests
     public static void preConditionsForClass() throws IOException {

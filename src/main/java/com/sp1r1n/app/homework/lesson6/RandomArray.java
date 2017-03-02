@@ -11,7 +11,7 @@ import java.util.stream.Stream;
  * Created by DELL on 2/6/2017.
  */
 public class RandomArray {
-    static int[] outputArray;
+    int[] outputArray;
     Random random;
 
     public RandomArray(){

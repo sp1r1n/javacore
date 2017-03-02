@@ -16,7 +16,7 @@ public class Lesson11Runner {
         ArrayList<String> listStr;
         ArrayList<Integer> listInt = new ArrayList<>();
         ArrayParser arrayParser = new ArrayParser();
-        FileWorker fileWorker = new FileWorker();
+        FileWorker fileWorker;
         BubbleSort bubbleSort = new BubbleSort();
         Scanner scanner;
         String readLine = "";
@@ -38,7 +38,8 @@ public class Lesson11Runner {
                 }
                 while (!arrayPath[1].equals(":")  || !arrayPath[2].equals("\\"));
             }
-            path = fileWorker.pathFix(path);
+            fileWorker = new FileWorker(path);
+            path = fileWorker.pathFix();
             System.out.flush();
             System.out.print("\n___________________________\nPlease select any function:\n" +
                     "1: read numbers from file, sort them, write to another file\n" +

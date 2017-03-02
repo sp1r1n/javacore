@@ -5,7 +5,6 @@ package com.sp1r1n.app.classwork.lesson13;
  */
 public class Person {
     protected final String name;
-    protected boolean isDead;
 
     public Person (String name){
         this.name = name;
