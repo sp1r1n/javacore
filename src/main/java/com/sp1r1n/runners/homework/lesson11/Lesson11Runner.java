@@ -61,6 +61,8 @@ public class Lesson11Runner {
                         writeText += i + "\n";
                     fileWorker.write(path + "output1.txt", writeText);
                     System.out.println("DONE Check your file!\n_________________");
+                    writeText = "";
+                    readText = "";
                     break;
                 case "2":
                     System.out.print("Please enter filename: ");
